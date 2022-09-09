@@ -87,6 +87,8 @@ def main():
         return
     path = save_articles_to_netscape_file(articles)
     log.info("Saved in %s", path)
+    if args.archive:
+        archive_posts(pocket, articles)
 
 
 if __name__ == "__main__":
